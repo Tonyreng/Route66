@@ -113,7 +113,7 @@ const EditNewUser = () => {
 
             if (!backendUpdateResponse.ok) {
                 const errorData = await backendUpdateResponse.json();
-                throw new Error(errorData.msg || 'Failed to update brokers profile avatar.');
+                throw new Error(errorData.msg || 'Failed to update avatar.');
             }
 
             setUserData(prevData => ({ ...prevData, avatarUrl: newAvatarUrl }));
